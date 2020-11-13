@@ -1,3 +1,8 @@
+html{
+  background: red;
+  height: 100%;	
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 * {
   padding: 0;
@@ -7,19 +12,12 @@
 
 body {
   font-family: 'Indie Flower', cursive;
-  background-color: #eee;
+  background-color: black;
   color: #555;
   text-align: center;
   padding: 4em 0;
 }
 
-.imgLoader {
-  position: fixed;
-  -webkit-animation: preLoad 1s steps(1);
-          animation: preLoad 1s steps(1);
-  width: 1px;
-  height: 1px;
-}
 @-webkit-keyframes preLoad {
   0% {
     background-image: url("../img/1.jpg");
@@ -63,8 +61,8 @@ body {
 .container {
   position: relative;
   width: 420px;
-  border: #fff solid 2px;
-  border-radius: 4px;
+  /* border: #fff solid 2px;
+  border-radius: 4px; */
   height: 420px;
 }
 
