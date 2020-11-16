@@ -1,6 +1,9 @@
 html{
-  background: red;
-  height: 100%;	
+  height: 100%;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
@@ -10,12 +13,45 @@ html{
   box-sizing: border-box;
 }
 
+#main-view {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 body {
   font-family: 'Indie Flower', cursive;
-  background-color: black;
-  color: #555;
+  background-color: rgb(245, 10, 206);
+  color: rgb(245, 10, 206);
   text-align: center;
-  padding: 4em 0;
+  /* padding: 4em 0; */
+  height: 100%;
+  width: 100%;
+}
+
+#mycanvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+#date-calc {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25pt;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  text-align: center;
+}
+
+#background {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.5;
 }
 
 @-webkit-keyframes preLoad {
@@ -59,11 +95,11 @@ body {
   }
 }
 .container {
-  position: relative;
-  width: 420px;
+  position: absolute;
+  width: 100%;
   /* border: #fff solid 2px;
   border-radius: 4px; */
-  height: 420px;
+  height: 100%;
 }
 
 .title {

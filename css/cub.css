@@ -1,13 +1,12 @@
-/*最外层容器样式*/
 .wrap{
 	width: 10px;
 	height: 10px;
-	/*改变左右上下,图片方块移动*/
 	margin: 200px 400px;
-	position: relative;
-	
+	position: absolute;
+	top: 0;
+	left: 0;
 }
-/*包裹所有容器样式*/
+
 .cube{
 	width:600px;
 	height:400px;
@@ -15,13 +14,14 @@
 	transform-style: preserve-3d;
 	transform: rotateX(-30deg) rotateY(-80deg);
 	-webkit-animation: rotate 20s infinite;
-	/*匀速*/
 	animation-timing-function: linear;
 }
+
 @-webkit-keyframes rotate{
 	from{transform: rotateX(0deg) rotateY(0deg);}
 	to{transform: rotateX(360deg) rotateY(360deg);}
 }
+
 .cube div{
 	position: absolute;
 	width: 300px;
@@ -29,30 +29,36 @@
 	opacity: 0.8;
 	transition: all .4s;
 }
-/*定义所有图片样式*/
+
 .pic{
 	width: 300px;
 	height: 300px;
 }
+
 .cube .out_front{
 	transform: rotateY(0deg) translateZ(150px);
 }
+
 .cube .out_back{
 	transform: translateZ(-150px) rotateY(180deg);
 }
+
 .cube .out_left{
 	transform: rotateY(90deg) translateZ(150px);
 }
+
 .cube .out_right{
 	transform: rotateY(-90deg) translateZ(150px);
 }
+
 .cube .out_top{
 	transform: rotateX(90deg) translateZ(150px);
 }
+
 .cube .out_bottom{
 	transform: rotateX(-90deg) translateZ(150px);
 }
-/*定义小正方体样式*/
+
 .cube span{
 	display: bloack;
 	width: 200px;
