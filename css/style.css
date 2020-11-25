@@ -83,6 +83,16 @@ body {
   display: none;
 }
 
+#sticky-wrapper {
+  position: absolute;
+  top: 50x;
+  left: 80px;
+  width: 15em;
+  height: auto;
+  z-index: 5;
+  display: none;
+}
+
 
 #date-calc {
   font-family: 'Courier New', Courier, monospace;
