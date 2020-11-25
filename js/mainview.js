@@ -1,8 +1,10 @@
 var together = new Date(2020, 9 - 1, 07);       // start from 0
 var dateCalcH = 30;
-var dateCalcW = 800;
+var dateCalcW = 900;
 var currentPage = 0;
 var drawnTree = false;
+var cur = 0;
+var totalBackgroundImage = 9;
 
 
 $(document).ready(function() {
@@ -49,7 +51,6 @@ $(document).ready(function() {
 
 
     // set stars
-    
     var obj = document.getElementById('gal');
     for (var i = 0; i < 100; i++) {
         var childObj = document.createElement('div');
@@ -62,13 +63,11 @@ $(document).ready(function() {
     }
     window.onmousewheel = wheelScrolling;
 
+    // set clock
     timer();
-    
-    // while (!drawnTree) {
-    //     $await(Jscex.Async.sleep(10));
-    // }
-    // DrawTree();
 
+    // set background switch
+    bgtimer();
 });
 
 function ChangePage() {
@@ -104,6 +103,21 @@ function SetChildrenProperty(curElement, property, value) {
     $(curElement).children().css(property, value);        
 }
 
+function bgtimer() {
+    cur = cur % totalBackgroundImage + 1;
+    var imgstr = 'url(img/background' + cur.toString() + '.jpg)';
+    console.log(imgstr);
+    $('#background').css({
+        'background-image': imgstr,
+        'background-size': '100% 100%',
+    });
+    $('#background1').css({
+        'background-image': imgstr,
+        'background-size': '100% 100%',
+    });
+    setTimeout("bgtimer()", 6000);
+}
+
 function timer() {
     $('#date-calc').html(GetDateDiffString());
     setTimeout("timer()", 1000);
@@ -122,7 +136,7 @@ function GetDateDiffString() {
     return (  days.toString() + " days "
             + hours.toString() + " hours "
             + minutes.toString() + " minutes "
-            + seconds.toString() + " sceconds");
+            + seconds.toString() + " sceconds since");
 }
 
 function DrawTree() {
