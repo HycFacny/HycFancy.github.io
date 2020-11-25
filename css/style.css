@@ -1,9 +1,24 @@
+* {
+  touch-action: none;
+}
+
 html{
   height: 100%;
 }
 
 html::-webkit-scrollbar {
   display: none;
+}
+
+body {
+  font-family: 'Indie Flower', cursive;
+  background-color: black;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  /* padding: 4em 0; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
@@ -36,16 +51,8 @@ html::-webkit-scrollbar {
   width: 100%;
   position: relative;
   display: none;
-}
-
-body {
-  font-family: 'Indie Flower', cursive;
-  background-color: rgb(245, 10, 206);
-  color: rgb(245, 10, 206);
-  text-align: center;
-  /* padding: 4em 0; */
-  height: 100%;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 #mycanvas {
@@ -54,6 +61,28 @@ body {
   left: 0px;
   z-index: -1;
 }
+
+#love-tree {
+  position: absolute;
+  margin: 0 auto;
+  top: 0px;
+  left: 0px;
+  width: 1100px;
+  height: 680px;
+  z-index: 3;
+  display: none;
+}
+
+#tree-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  height: 680px;
+  margin-top: 10px;
+  z-index: 1;
+  display: none;
+}
+
 
 #date-calc {
   font-family: 'Courier New', Courier, monospace;
@@ -64,6 +93,16 @@ body {
 }
 
 #background {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+#background1 {
   height: 100%;
   width: 100%;
   top: 0;
@@ -91,14 +130,14 @@ body {
       opacity:1;
   }
 }
-
-#main-view-flag:checked ~ #main-view {
+/* 
+#main-view-flag:checked ~ #background {
   -webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
   -o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
   animation: moveDown 0.6s ease-in-out 0.2s backwards;
 }
 
-#main-view-flag:checked ~ #main-view {
+#main-view-flag:checked ~ #background {
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
   -ms-transform: translateY(0%);
@@ -118,7 +157,7 @@ body {
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
   transform: translateY(0%);
-}
+} */
 
 
 

@@ -3,20 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>yufei test</title>
+    <title>vicky_yf's homepage</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/cub.css"/>
     <link rel="stylesheet" href="css/clock.css"/>
     <link rel="stylesheet" href="css/flower.css">
+    <link rel="stylesheet" href="css/stars.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jscex.min.js"></script>
+    <script type="text/javascript" src="js/jscex-parser.js"></script>
+    <script type="text/javascript" src="js/jscex-jit.js"></script>
+    <script type="text/javascript" src="js/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="js/jscex-async.min.js"></script>
+    <script type="text/javascript" src="js/jscex-async-powerpack.min.js"></script>
     <script type="text/javascript" src="js/mainview.js"></script>
+    <script type="text/javascript" src="js/tree.js"></script>
 </head>
 
 <body>
 
 <div id="main-view" style="display: block;">
-    <input id="main-view-flag" style="width: 0; height: 0; display: none; border: 0; border-radius: 0%;" checked>
+    <!-- <input id="main-view-flag" style="width: 0; height: 0; display: none; border: 0; border-radius: 0%;" checked> -->
     <canvas id="myCanvas" class="main-view-kit">
         <script type="text/javascript" src="js/canvas.js"></script>
     </canvas>
@@ -123,9 +131,17 @@
     </div>
 </div>
 
-
-<div id="next-view" style="background-image: url(img/1.jpg); background-size: 100% 100%; ">
+<div id="next-view">
+    <div id="background1" class="main-view-kit" style="background-image: url(img/background.jpg); background-size: 100% 100%;"></div>
     <input id="next-view-flag" style="width: 0; height: 0; display: none; border: 0; border-radius: 0%;">
+    <div class="origin">
+        <div class="control">
+            <div class="galaxy" id="gal"></div>
+        </div>
+    </div>
+    <div id="tree-wrapper">
+        <canvas id="love-tree"></canvas>
+    </div>
 </div>
 
 </body>
